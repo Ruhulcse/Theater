@@ -12,7 +12,7 @@ function Welcome() {
             we are here for your entertainment!</p>
             <br></br>
             <br></br>
-            <a href="#" style={{color:"black", fontSize:"220%"}}>Book Ticketes Now</a>
+            <a href="/booking" style={{color:"black", fontSize:"220%"}}>Book Ticketes Now</a>
             <br></br>
             <br></br>
             <br></br>
@@ -20,7 +20,7 @@ function Welcome() {
             <br></br>
             <br></br>
             <br></br>
-            <a href="#" style={{color:"red", fontSize:"220%"}}>Time Remaining for order: 10:00</a>
+            <a href="!#" style={{color:"red", fontSize:"20%"}}>Time Remaining for order: 10:00</a>
         </div>
     )
 }

@@ -4,3 +4,36 @@
     margin-right: 10%;
     margin-top: 0;
 }
+
+
+.form-inline {  
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.form-inline label {
+  margin: 5px 10px 5px 0;
+  color: white;
+  font-size: 182%;
+}
+
+.form-inline input {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 19px;
+  border: 1px solid black;
+}
+
+.form-inline button {
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  color: #0c0c0c;
+  cursor: pointer;
+  border-radius: 13px;
+  border: 1px solid black;
+  font-size: 100%;
+}
