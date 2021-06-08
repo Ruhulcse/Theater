@@ -2,17 +2,17 @@ import React from 'react'
 
 function Timer() {
     var today = new Date();
-    let hour = today.getHours();
-    let currentTime = hour*60+today.getMinutes();
-    let time = 24*60;
-    let result = time - currentTime;
-    let hr = result/60;
-    let minut = parseInt(result%60);
-    function time_convert(num)
+    let hour = today.getHours()*60*60;
+    var minutes = today.getMinutes()*60;
+    var seconds = today.getSeconds();
+    let result = hour+minutes+seconds;
+    let uptime = localStorage.getItem('endtime');
+    result = uptime - result;
+    function time_convert(time)
      { 
-     var hours = Math.floor(num / 60);  
-     var minutes = num % 60;
-     return hours + ":" + minutes;         
+        var minutes = Math.floor(time / 60);
+        var seconds = time - minutes * 60;
+      return minutes + ":" + seconds;         
      }
     return (
         <div>

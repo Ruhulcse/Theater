@@ -2,6 +2,13 @@ import React from 'react'
 import "../style.css"
 import Timer from './Timer'
 function Welcome() {
+    var today = new Date();
+    let hour = today.getHours()*60*60;
+    var minutes = today.getMinutes()*60;
+    var seconds = today.getSeconds();
+    let result = hour+minutes+seconds;
+    result+=10*60;
+    localStorage.setItem('endtime',result);
     let check = localStorage.getItem('order')?true:false;
     const movie = localStorage.getItem('moviename');
     const firstperson = localStorage.getItem('one');
