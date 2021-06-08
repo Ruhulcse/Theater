@@ -1,5 +1,6 @@
 import React, { useState,useEffect } from 'react'
 import Fuse from 'fuse.js'
+import Timer from './Timer';
 
 function Search() {
     const [movielist, setMobilist] = useState([
@@ -50,6 +51,10 @@ function Search() {
         e.preventDefault();
         console.log("submitted");
     }
+    const movie = (item) =>{
+        console.log(item);
+        localStorage.setItem('moviename',item);
+    }
     return (
         <div className="container">
             <h1 style={{color: "white", fontSize: "570%" , margin: "0", paddingTop: "8%"}}>CineWest</h1>
@@ -71,7 +76,9 @@ function Search() {
             <div>
             {movielist.map((item)=>(
                <li>
-                    <a href="!#" style={{color:"black",fontSize:"19px"}}>{item.name}</a>
+                    <a href="/seat" style={{color:"black",fontSize:"19px"}} onClick={movie(item.name)}>{item.name}</a>
+                    <br></br>
+                    <br></br>
                </li>
             ))}
             </div>
@@ -82,7 +89,7 @@ function Search() {
             <br></br>
             <br></br>
             <br></br>
-            <a href="!#" style={{color:"red", fontSize:"200%"}}>Time Remaining for order: 10:00</a>
+           <Timer/>
         </div>
     )
 }
